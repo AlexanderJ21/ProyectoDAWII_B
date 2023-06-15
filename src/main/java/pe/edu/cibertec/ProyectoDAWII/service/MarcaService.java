@@ -18,7 +18,13 @@ public class MarcaService {
         return marcaPRepository.findAll();
     }
 
+    public void registrarMarca(MarcaP marca){
+            marcaPRepository.save(marca);
+    }
 
+    public void eliminarMarca(MarcaP marca){
+        marcaPRepository.deleteById(marca.getCodigoM());
+    }
 
 
 }
