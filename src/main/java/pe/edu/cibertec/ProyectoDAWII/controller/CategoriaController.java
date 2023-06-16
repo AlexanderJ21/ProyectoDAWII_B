@@ -18,7 +18,7 @@ public class CategoriaController {
     @GetMapping("/frmMantCategoria")
     public String frmMantCategoria(Model model){
         model.addAttribute("listarCategoria",categoriaService.listarCategoria());
-         return "Categoria/frmMantCategoria";
+        return "Categoria/frmMantCategoria";
     }
 
 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout::head">
+  <meta charset="UTF-8">
+  <title>Mantenimiento Producto</title>
+</head>
+<body>
+<nav th:insert="layout::menu"></nav>
+<div class="card" >
+  <div class="card-header text-bg-dar mb-3">
+    Lista de Productos
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Codigo</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Descripcion</th>
+        <th scope="col">codigoC</th>
+        <th scope="col">codigoPr</th>
+        <th scope="col">codigoM</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Stock</th>
+
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="producto :${listarProducto}">
+        <td></td>
+        <td th:text="${producto.codigoP}"></td>
+        <td th:text="${producto.nombreP}"></td>
+        <td th:text="${producto.descripcionP}"></td>
+        <td th:text="${producto.codigoC}"></td>
+        <td th:text="${producto.codigoPr}"></td>
+        <td th:text="${producto.codigoM}"></td>
+        <td th:text="${producto.precioP}"></td>
+        <td th:text="${producto.stockP}"></td>
+
+      </tr>
+
+      </tbody>
+    </table>
+
+
+  </div>
+
+</div>
+</body>
+</html>
