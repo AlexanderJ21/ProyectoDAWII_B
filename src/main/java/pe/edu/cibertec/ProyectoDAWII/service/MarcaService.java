@@ -7,7 +7,7 @@ import pe.edu.cibertec.ProyectoDAWII.repository.MarcaPRepository;
 
 import java.util.List;
 
-@Service
+
 public class MarcaService {
 
     @Autowired
