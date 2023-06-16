@@ -8,6 +8,7 @@ import pe.edu.cibertec.ProyectoDAWII.repository.MarcaPRepository;
 import java.util.List;
 
 
+@Service
 public class MarcaService {
 
     @Autowired
@@ -15,6 +16,7 @@ public class MarcaService {
 
 
     public List<MarcaP> listarMarca(){
+
         return marcaPRepository.findAll();
     }
 

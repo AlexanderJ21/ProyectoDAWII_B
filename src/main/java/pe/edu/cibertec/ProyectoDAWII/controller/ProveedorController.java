@@ -1,11 +1,15 @@
 package pe.edu.cibertec.ProyectoDAWII.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import pe.edu.cibertec.ProyectoDAWII.service.MarcaService;
+import org.springframework.web.bind.annotation.RequestMapping;
 import pe.edu.cibertec.ProyectoDAWII.service.ProveedorService;
 
+
+@Controller
+@RequestMapping("/Proveedor")
 public class ProveedorController {
 
     @Autowired
@@ -13,7 +17,7 @@ public class ProveedorController {
 
 
     @GetMapping("/frmMantProveedor")
-    public String frmMantMarca(Model model){
+    public String frmMantProveedor(Model model){
         model.addAttribute("listarProveedor", proveedorService.listarProveedor());
         return "Proveedor/frmMantProveedor";
     }

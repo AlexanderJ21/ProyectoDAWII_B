@@ -19,6 +19,7 @@ public class ProveedorService {
     }
 
     public void registrarProveedor(Proveedor proveedor){
+
         proveedorRepository.save(proveedor);
     }
 
