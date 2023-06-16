@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout::head">
+    <meta charset="UTF-8">
+    <title>Mantenimiento Categoria</title>
+</head>
+<body>
+<nav th:insert="layout::menu"></nav>
+<div class="card" >
+    <div class="card-header text-bg-dar mb-3">
+        Lista de Marcas
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Codigo</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripcion</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="categoria :${listarCategoria}">
+                <td></td>
+                <td th:text="${categoria.codigoC}"></td>
+                <td th:text="${categoria.nombreC}"></td>
+                <td th:text="${categoria.descripcionC}"></td>
+            </tr>
+
+            </tbody>
+        </table>
+
+
+    </div>
+
+</div>
+</body>
+</html>
