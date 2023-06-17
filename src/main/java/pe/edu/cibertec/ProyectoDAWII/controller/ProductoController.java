@@ -9,6 +9,8 @@ import pe.edu.cibertec.ProyectoDAWII.bd.request.ProductoRequest;
 import pe.edu.cibertec.ProyectoDAWII.bd.response.ResultadoResponse;
 import pe.edu.cibertec.ProyectoDAWII.service.ProductoService;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/Producto")
 public class ProductoController {
@@ -43,8 +45,6 @@ public class ProductoController {
         }
          return  ResultadoResponse.builder().mensaje(mensaje).respuesta(respuesta).build();
     }
-
-
     @DeleteMapping("/eliminarProducto")
     @ResponseBody
     public ResultadoResponse eliminarProducto(@RequestBody ProductoRequest productoRequest){
@@ -60,8 +60,13 @@ public class ProductoController {
     }
 
 
+
+    @GetMapping("/listarProductos")
+    @ResponseBody
+    public List<Producto> listarProductos() {
+
+        return productoService.listarProducto();
     }
-
-
+ }
 
 }
