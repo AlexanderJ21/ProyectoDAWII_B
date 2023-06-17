@@ -1,10 +1,13 @@
 package pe.edu.cibertec.ProyectoDAWII.bd;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
-import lombok.Generated;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @NoArgsConstructor
 @Getter
@@ -21,6 +24,12 @@ public class MarcaP {
 
     @Column(name = "nombreM")
     private String nombreM;
+
+
+    @JsonManagedReference
+    @OneToMany(mappedBy = "Producto",cascade = CascadeType.ALL,orphanRemoval = true)
+    private List<Producto> listaProducto = new ArrayList<>();
+
 
 
 }

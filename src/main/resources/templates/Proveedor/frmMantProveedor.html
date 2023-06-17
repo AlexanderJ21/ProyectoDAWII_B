@@ -14,7 +14,7 @@
         <table class="table">
             <thead>
             <tr>
-                <th scope="col">#</th>
+
                 <th scope="col">Codigo</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Descripcion</th>
@@ -23,7 +23,7 @@
             </thead>
             <tbody>
             <tr th:each="proveedor :${listarProveedor}">
-                <td></td>
+
                 <td th:text="${proveedor.codigoPR}"></td>
                 <td th:text="${proveedor.nombrePR}"></td>
                 <td th:text="${proveedor.descripcionPR}"></td>

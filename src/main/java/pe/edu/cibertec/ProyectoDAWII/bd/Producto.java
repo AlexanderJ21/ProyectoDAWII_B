@@ -1,5 +1,6 @@
 package pe.edu.cibertec.ProyectoDAWII.bd;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -37,7 +38,20 @@ public class Producto {
     @Column(name = "stockPRO")
     private int stockPRO;
 
+    @JsonBackReference
+      @ManyToOne(cascade = CascadeType.PERSIST)
+      @JoinColumn(name = "codigoC")
+      private Categoria categoria;
 
+    @JsonBackReference
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "codigoPR")
+    private Proveedor proveedor;
+
+    @JsonBackReference
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "codigoM")
+    private MarcaP marcaP;
 
 
 }

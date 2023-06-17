@@ -12,10 +12,11 @@
   </div>
   <div class="card-body">
     <button id="btnagregar" type="button" class="btn btn-primary">Agregar</button>
-    <table class="table">
+    <div id="mensaje"> </div>
+    <table id="tblProducto" class="table">
       <thead>
       <tr>
-        <th scope="col">#</th>
+
         <th scope="col">Codigo</th>
         <th scope="col">Nombre</th>
         <th scope="col">Descripcion</th>
@@ -32,7 +33,7 @@
       </thead>
       <tbody>
       <tr th:each="producto :${listarProducto}">
-        <td></td>
+
         <td th:text="${producto.codigoPRO}"></td>
         <td th:text="${producto.nombrePRO}"></td>
         <td th:text="${producto.descripcionPRO}"></td>
@@ -42,21 +43,96 @@
         <td th:text="${producto.precioPRO}"></td>
         <td th:text="${producto.stockPRO}"></td>
         <td>
-          <button type="button" class="btn btn-primary">Actualizar</button>
-        </td>
+          <button type="button" class="btn btn-primary"
+                  :data-codigoPRO="${producto.codigoPRO}"
+                  :data-nombrePRO="${producto.nombrePRO}"
+                  :data-descripcionPRO="${producto.descripcionPRO}"
+                  :data-codigoC="${producto.codigoC}"
+                  :data-codigoPR="${producto.codigoPR}"
+                  :data-codigoM="${producto.codigoM}"
+                  :data-precioPRO="${producto.precioPRO}"
+                  :data-stockPRO="${producto.stockPRO}"
 
+          > Actualizar </button>
+        </td>
         <td>
-          <button type="button" class="btn btn-primary">Eliminar</button>
+          <button type="button" class="btn btn-primary"
+                  :data-codigoPRO="${producto.codigoPRO}"
+                  :data-nombrePRO="${producto.nombrePRO}"
+                  :data-descripcionPRO="${producto.descripcionPRO}"
+                  :data-codigoC="${producto.codigoC}"
+                  :data-codigoPR="${producto.codigoPR}"
+                  :data-codigoM="${producto.codigoM}"
+                  :data-precioPRO="${producto.precioPRO}"
+                  :data-stockPRO="${producto.stockPRO}"
+          > Eliminar </button>
         </td>
 
       </tr>
 
       </tbody>
     </table>
-
-
   </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modalNuevo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Producto</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
 
+        <div class="mb-3">
+          <label for="txtNombrePRO" class="form-label">Nombre del producto</label>
+          <input type="text" class="form-control" id="txtNombrePRO" placeholder="Ingrese nombre del producto">
+        </div>
+
+        <div class="mb-3">
+          <label for="txtDescripcionPRO" class="form-label">Descripcion del producto</label>
+          <input type="text" class="form-control" id="txtDescripcionPRO" placeholder="Ingrese descripcion del producto">
+        </div>
+
+        <div class="mb-3">
+          <label for="cboCategoria" class="form-label">Categoria</label>
+          <select id="cboCategoria" class="form-control"> </select>
+        </div>
+        <input type="hidden" id="hddcodigoC">
+
+        <div class="mb-3">
+          <label for="cboProveedor" class="form-label"> Proveedor </label>
+          <select id="cboProveedor" class="form-control"> </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="cboMarca" class="form-label">Marca </label>
+          <select id="cboMarca" class="form-control"> </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="txtPrecioPRO" class="form-label">Precio </label>
+          <input type="number" class="form-control" id="txtPrecioPRO" placeholder="Ingrese el precio">
+        </div>
+
+        <div class="mb-3">
+          <label for="txtStockPRO" class="form-label">Stock </label>
+          <input type="number" class="form-control" id="txtStockPRO" placeholder="Ingrese el stock">
+        </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 </html>

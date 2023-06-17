@@ -51,7 +51,7 @@ public class ProductoController {
         String mensaje = "Producto eliminado correctamente";
         Boolean respuesta = true;
         try {
-            productoService.eliminarProducto(productoRequest.getCodigoPRO());
+             //productoService.eliminarProducto(productoRequest.getCodigoPRO());
         }catch (Exception ex){
             mensaje = "Producto no eliminado";
             respuesta = false;
@@ -69,4 +69,4 @@ public class ProductoController {
     }
  }
 
-}
+
