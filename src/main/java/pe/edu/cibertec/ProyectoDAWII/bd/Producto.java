@@ -15,23 +15,29 @@ public class Producto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int codigoP;
+    private int codigoPRO;
 
-    @Column(name = "nombreP")
-    private String nombreP;
+    @Column(name = "nombrePRO")
+    private String nombrePRO;
 
-    @Column(name = "descripcionP")
-    private String descripcionP;
+    @Column(name = "descripcionPRO")
+    private String descripcionPRO;
 
     @Column(name = "codigoC")
-    private String codigoC;
+    private int codigoC;
 
-    @Column(name = "codigoPr")
-    private String codigoPr;
+    @Column(name = "codigoPR")
+    private int codigoPR;
 
-    @Column(name = "precioP")
-    private double precioP;
-    @Column(name = "stockP")
-    private int stockP;
+    @Column(name = "codigoM")
+    private int codigoM;
+
+    @Column(name = "precioPRO")
+    private double precioPRO;
+    @Column(name = "stockPRO")
+    private int stockPRO;
+
+
+
 
 }

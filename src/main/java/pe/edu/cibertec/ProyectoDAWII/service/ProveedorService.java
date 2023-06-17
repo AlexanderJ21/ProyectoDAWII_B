@@ -20,7 +20,7 @@ public class ProveedorService {
     }
 
     public void eliminarProveedor(Proveedor proveedor){
-        proveedorRepository.deleteById(proveedor.getCodigoPr());
+        proveedorRepository.deleteById(proveedor.getCodigoPR());
     }
 
 

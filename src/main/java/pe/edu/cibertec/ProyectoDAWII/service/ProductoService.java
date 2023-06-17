@@ -23,7 +23,7 @@ public class ProductoService {
       }
 
       public void eliminarProducto(Producto producto){
-         productoRepository.deleteById(producto.getCodigoP());
+         productoRepository.deleteById(producto.getCodigoPRO());
       }
 
 }

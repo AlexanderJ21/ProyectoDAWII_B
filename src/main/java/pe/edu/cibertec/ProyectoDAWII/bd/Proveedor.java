@@ -14,12 +14,12 @@ public class Proveedor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int codigoPr;
+    private int codigoPR;
 
-    @Column(name = "nombrePr")
-    private String nombrePr;
-    @Column(name = "descripcionPr")
-    private String descripcionPr;
+    @Column(name = "nombrePR")
+    private String nombrePR;
+    @Column(name = "descripcionPR")
+    private String descripcionPR;
 
 
 }
