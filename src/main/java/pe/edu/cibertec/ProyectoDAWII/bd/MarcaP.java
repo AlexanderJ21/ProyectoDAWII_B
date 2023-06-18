@@ -26,9 +26,10 @@ public class MarcaP {
     private String nombreM;
 
 
-    @JsonManagedReference
-    @OneToMany(mappedBy = "Producto",cascade = CascadeType.ALL,orphanRemoval = true)
-    private List<Producto> listaProducto = new ArrayList<>();
+    // @JsonManagedReference
+    //@OneToMany(mappedBy = "MarcaP",
+    //      cascade = CascadeType.ALL,orphanRemoval = true)
+    //   private List<Producto> listaProducto = new ArrayList<>();
 
 
 

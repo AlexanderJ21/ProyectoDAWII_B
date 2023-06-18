@@ -26,9 +26,9 @@ public class Proveedor {
     private String descripcionPR;
 
 
-    @JsonManagedReference
-    @OneToMany(mappedBy = "Producto",cascade = CascadeType.ALL,orphanRemoval = true)
-    private List<Producto> listaProducto = new ArrayList<>();
+    //@JsonManagedReference
+    //@OneToMany(mappedBy = "Proveedor",cascade = CascadeType.ALL,orphanRemoval = true)
+    //private List<Producto> listaProducto = new ArrayList<>();
 
 
 }

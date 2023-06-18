@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +25,7 @@ public class Categoria {
     @Column(name = "descripcionC")
     private String descripcionC;
 
-    @JsonManagedReference
-    @OneToMany(mappedBy = "Producto",cascade = CascadeType.ALL,orphanRemoval = true)
-    private List<Producto> listaProducto = new ArrayList<>();
+    //@JsonManagedReference
+    //@OneToMany(mappedBy = "Categoria",cascade = CascadeType.ALL,orphanRemoval = true)
+    //private List<Producto> listaProducto = new ArrayList<>();
 }
